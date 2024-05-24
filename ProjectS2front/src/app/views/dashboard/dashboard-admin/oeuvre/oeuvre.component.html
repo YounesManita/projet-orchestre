@@ -1,0 +1,34 @@
+<section id="artwork-form" class="h-100vh w-100vw flex justify-center items-center">
+    <div class="mx-5 md-mx-l5 px-10 py-10 br-6 border-white w-auto">
+        <div class="flex flex-column">
+            <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 text-center">Add Oeuvre</h1>
+            <form (ngSubmit)="onSubmit()" #artworkForm="ngForm">
+                <div class="h-7"></div>
+                <input type="text"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                    placeholder="Title" [(ngModel)]="titre" name="titre" required>
+                <div class="h-7"></div>
+                <input type="text"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                    placeholder="Compositor" [(ngModel)]="compositeur" name="compositeur" required>
+                <div class="h-7"></div>
+                <input type="text"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                    placeholder="Arranger" [(ngModel)]="arrangeur" name="arrangeur" required>
+                <div class="h-7"></div>
+                <div class="flex flex-row justify-between">
+                    <input type="number"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc mr-5"
+                    placeholder="Composition Year" [(ngModel)]="anneeComposition" name="anneeComposition" required>
+                <input type="text"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc"
+                    placeholder="Genre" [(ngModel)]="genre" name="genre" required>
+                </div>
+            
+                <div class="h-7"></div>
+                <button type="submit" [disabled]="artworkForm.invalid"
+                    class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s3 mr-0 w-100pc">Add</button>
+            </form>
+        </div>
+    </div>
+</section>

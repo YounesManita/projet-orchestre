@@ -1,0 +1,24 @@
+<section id="leave-absence-confirm-list" class="w-100vw">
+    <div class="p-10 w-100pc flex justify-center">
+        <div class="table-container text-center cell-border">
+            <table class="bg-indigo-lightest-10 bg-black white">
+                <thead class="bg-indigo-lightest-30 white">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Status</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let candidat of concertcandidat">
+                        <td>{{ candidat.candidat.nom }}</td>
+                        <td>{{ candidat.candidat.prenom }}</td>
+                        <td>{{ candidat.presence }}</td>
+                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

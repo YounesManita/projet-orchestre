@@ -1,0 +1,29 @@
+<section id="repetition-list" class="w-100vw">
+    <div class="p-10 w-100pc flex justify-center">
+        <div class="table-container text-center cell-border">
+            <table class="bg-indigo-lightest-10 bg-black white">
+                <thead class="bg-indigo-lightest-30 white">
+                    <tr>
+                        <th>Place</th>
+                        <th>Date</th>
+                        <th>Start hour</th>
+                        <th>End hour</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let repetition of repetitions">
+                        <td>{{ repetition.lieu }}</td>
+                        <td>{{ repetition.date }}</td>
+                        <td>{{ repetition.heure_debut }}</td>
+                        <td>{{ repetition.heure_fin }}</td>
+                        <td>
+                            <a class="button bg-indigo white fw-600 no-underline mr-5" (click)="editRepetition(repetition)">Edit</a>
+                            <a class="button bg-white black fw-600 no-underline" (click)="deleteRepetition(repetition)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

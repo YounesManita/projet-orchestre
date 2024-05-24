@@ -1,0 +1,39 @@
+<section id="condidat-list" class="w-100vw">
+    <div class="p-10 w-100pc flex justify-center">
+        <div class="table-container text-center cell-border">
+            <table class="bg-indigo-lightest-10 bc-white white">
+                <thead class="bg-indigo-lightest-30 white">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Nationality</th>
+                        <th>Height</th>
+                        <th>Phone</th>
+                        <th>CIN</th>
+                        <th>Professional Situation</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let candidate of candidates">
+                        <td>{{ candidate.prenom }}</td>
+                        <td>{{ candidate.nom }}</td>
+                        <td>{{ candidate.sexe }}</td>
+                        <td>{{ candidate.dateNaissance }}</td>
+                        <td>{{ candidate.Nationalite }}</td>
+                        <td>{{ candidate.taille }}</td>
+                        <td>{{ candidate.telephone }}</td>
+                        <td>{{ candidate.cin }}</td>
+                        <td>{{ candidate.situationPro }}</td>
+                        <td>
+                            <a class="button bg-indigo white fw-600 no-underline mr-5" (click)="editCandidate(candidate)">Edit</a>
+                            <a class="button bg-white black fw-600 no-underline" (click)="deleteCandidate(candidate)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

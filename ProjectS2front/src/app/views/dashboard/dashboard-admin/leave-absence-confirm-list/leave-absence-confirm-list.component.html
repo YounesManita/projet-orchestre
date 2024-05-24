@@ -1,0 +1,24 @@
+<section id="leave-absence-confirm-list" class="w-100vw">
+    <div class="p-10 w-100pc flex justify-center">
+        <div class="table-container text-center cell-border">
+            <table class="bg-indigo-lightest-10 bg-black white">
+                <thead class="bg-indigo-lightest-30 white">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let leave of leaves">
+                        <td>{{ leave.candidat.nom }}</td>
+                        <td>{{ leave.candidat.prenom }}</td>
+                        <td>{{ leave.Datedebut }}</td>
+                        <td>{{ leave.DateFin }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<section id="concert-list" class="w-100vw">
+    <div class="p-10 w-100pc flex justify-center">
+        <div class="table-container text-center cell-border">
+            <table class="bg-indigo-lightest-10 bg-black white">
+                <thead class="bg-indigo-lightest-30 white">
+                    <tr>
+                        <th>Date</th>
+                        <th>Place</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let concert of concerts">
+                        <td>{{ concert.Date }}</td>
+                        <td>{{ concert.lieu }}</td>
+                        <td>
+                            <a class="button bg-indigo white fw-600 no-underline mr-5" (click)="markPresent(concert._id)">Present</a>
+                            <a class="button bg-white black fw-600 no-underline" (click)="markAbsent(concert._id)">Absent</a>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

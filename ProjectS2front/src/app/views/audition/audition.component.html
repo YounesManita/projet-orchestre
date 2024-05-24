@@ -1,0 +1,36 @@
+<!-- Form -->
+<section id="audition-registration" class="h-100vh flex justify-center items-center mx-10 my-10">
+  <div class="mx-5 md-mx-l5 px-10 py-10 br-6 border-white w-70pc">
+      <div class="flex flex-column">
+          <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 text-center">Generate<br>Audition</h1>
+          <div class="h-l2"></div>
+          <form (ngSubmit)="onSubmit()" #repetitionForm="ngForm">
+              <div class="h-7"></div>
+              <input type="date"
+                  class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                  placeholder="Date" [(ngModel)]="date_premierjouraudition" name="date" required>
+              <div class="h-7"></div>
+              <div class="flex flex-row justify-between">
+                  <input type="time"
+                  class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc mr-5"
+                  placeholder="Start Hour" [(ngModel)]="heuredebut_audition" name="startHour" required>
+              <input type="time"
+                  class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc"
+                  placeholder="End Hour" [(ngModel)]="heureFin_audition" name="endHour" required>
+              </div>
+              <div class="h-7"></div>
+              <div class="flex flex-row justify-between">
+                  <input type="time"
+                  class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc mr-5"
+                  placeholder="Hour" [(ngModel)]="heuredejeuner" name="startHour" required>
+              <input type="number"
+                  class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc"
+                  placeholder="Durer" [(ngModel)]="durerdejeuner" name="endHour" required>
+              </div>
+              <div class="h-7"></div>
+              <button type="submit" [disabled]="repetitionForm.invalid"
+                  class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s3 mr-0 w-100pc">Generate</button>
+          </form>
+      </div>
+  </div>
+</section>

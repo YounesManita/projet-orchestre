@@ -1,0 +1,29 @@
+<section id="repetition-add" class="h-100vh w-100vw flex justify-center items-center">
+    <div class="mx-5 md-mx-l5 px-10 py-10 br-6 border-white w-auto">
+        <div class="flex flex-column">
+            <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 text-center">Add <br>Repetition</h1>
+            <form (ngSubmit)="onSubmit()" #repetitionForm="ngForm">
+                <div class="h-7"></div>
+                <input type="text"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                    placeholder="Place" [(ngModel)]="lieu" name="place" required>
+                <div class="h-7"></div>
+                <input type="date"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-100pc"
+                    placeholder="Date" [(ngModel)]="date" name="date" required>
+                <div class="h-7"></div>
+                <div class="flex flex-row justify-between">
+                    <input type="time"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc mr-5"
+                    placeholder="Start Hour" [(ngModel)]="heure_debut" name="startHour" required>
+                <input type="time"
+                    class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 w-50pc"
+                    placeholder="End Hour" [(ngModel)]="heure_fin" name="endHour" required>
+                </div>
+                <div class="h-7"></div>
+                <button type="submit" [disabled]="repetitionForm.invalid"
+                    class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s3 mr-0 w-100pc">Add</button>
+            </form>
+        </div>
+    </div>
+</section>

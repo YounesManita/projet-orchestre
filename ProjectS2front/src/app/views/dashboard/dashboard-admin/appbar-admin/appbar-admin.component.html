@@ -1,0 +1,49 @@
+<nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
+    <div class="flex justify-between">
+        <a class="flex items-center p-2 mr-4 no-underline"  routerLink="">
+            <img class="max-h-l2 w-auto" src="/assets/images/logo.png" />
+        </a>
+        <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+            class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+            <i data-feather="menu"></i>
+        </a>
+    </div>
+    <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/precondidat-list">Pre-Condidat List</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/condidat-list">Condidat List</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/audition-list">Audition List</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/leave-absence-list">Leave of Absence List</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/leave-absence-confirm-list">Confirmed Leave List</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/account-acceptation">Acceptation Acountt</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/add-oeuvre">Add Oeuvre</a>
+        <a class="fs-s1 mx-3 py-3 indigo no-underline hover-underline" routerLink="/dashboard-admin/changePassword">Change Password</a>
+
+
+        <div class="relative inline-block ">
+            <a class="button bg-black" data-toggle="dropdown">
+                Gestion des Concert 
+                <i data-feather="chevron-down" class="h-5 ml-1"></i>
+            </a>
+            <div class="dropdown-menu hidden absolute z-100 left-0 top-100pc py-1 fs-s2">
+                <div class="shadow-3 br-6 bg-black min-w-l10 border">
+                    <a class="block p-3 white bg-black hover-bg-indigo-lightest-10 no-underline" routerLink="/dashboard-admin/add-concert"> Add concert </a>
+                    <a class="block p-3 white bg-black hover-bg-indigo-lightest-10 no-underline" routerLink="/dashboard-admin/concert-list"> Concert List </a>
+                    
+                </div>
+             </div>
+        </div>
+        <div class="relative inline-block ">
+            <a class="button bg-black" data-toggle="dropdown">
+                Gestion des Repetition 
+                <i data-feather="chevron-down" class="h-5 ml-1"></i>
+            </a>
+            <div class="dropdown-menu hidden absolute z-100 left-0 top-100pc py-1 fs-s2">
+                <div class="shadow-3 br-6 bg-black min-w-l10 border">
+                    <a class="block p-3 white bg-black hover-bg-indigo-lightest-10 no-underline" routerLink="/dashboard-admin/add-repetition"> Add Repetition </a>
+                    <a class="block p-3 white bg-black hover-bg-indigo-lightest-10 no-underline" routerLink="/dashboard-admin/repetition-list-admin"> Repetition List </a>
+                </div>
+             </div>
+        </div>
+        <a class="button bg-white black fw-600 no-underline mx-5" routerLink="/login">Logout</a>
+    </div>
+</nav>

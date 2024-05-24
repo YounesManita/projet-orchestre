@@ -1,0 +1,21 @@
+<!-- Confirmation -->
+<section id="confirmation" class="h-100pc">
+    <div *ngIf="!confirmationSuccess" class="h-100vh flex justify-center items-center bg-black-80">
+        <div class="mx-5 md-mx-l5 px-10 py-10 bg-black br-6 border-white w-33pc">
+            <div class="flex flex-column">
+                <h1 class="white fs-l3 lh-3 md-fs-l3 md-lh-1 fw-900 text-center">Confirmation</h1>
+               
+                <button type="button" class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s3 mr-0 min-w-25vw">Confirmation</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="confirmationSuccess" class="h-100vh flex justify-center items-center bg-black-80">
+        <div class="mx-5 md-mx-l5 px-10 py-10 bg-black br-6 border-white w-33pc">
+            <div class="flex flex-column">
+                <h1 class="white fs-l3 lh-3 md-fs-l3 md-lh-1 fw-900 text-center">Confirmation Success</h1>
+                <p class="white">Votre compte a été confirmé avec succès!</p>
+               
+            </div>
+        </div>
+    </div>
+</section>

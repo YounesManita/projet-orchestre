@@ -1,0 +1,49 @@
+<!-- Appbar -->
+<app-appbar></app-appbar>
+
+<!-- Login -->
+<section id="login" class="min-h-100vh bg-fixed bg-no-repeat bg-c bg-cover"
+    style="background-image:url(assets/images/background.jpg);">
+    <div class="min-h-100vh flex justify-center items-center bg-black-80">
+        <div class="mx-5 md-mx-l5 px-10 py-10 bg-black br-6 border-white w-33pc">
+            <div class="flex flex-column">
+                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 text-center">Login</h1>
+                <div class="h-l2"></div>
+                <div class="indigo-lightest fw-100 fs-s1 opacity-50 my-2" style="text-align: justify;">
+                    Transform Your Musical Journey: Take the Leap and Sign Up Now to Let Your Voice Resonate!
+                </div>
+                <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                    <div class="br-8 mt-10 flex flex-column">
+                        <input type="email"
+                            class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw"
+                            placeholder="Email" [(ngModel)]="email" name="email" required email #emailControl="ngModel">
+                        <span class="white opacity-20 fs-s3 mt-3"
+                            *ngIf="emailControl.invalid && (emailControl.dirty || emailControl.touched)">
+                            <span *ngIf="emailControl.errors?.['required']">Email is required</span>
+                            <span *ngIf="emailControl.errors?.['email']">Invalid email address</span>
+                        </span>
+                        <div class="h-7"></div>
+                        <input type="password"
+                            class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw"
+                            placeholder="Password" [(ngModel)]="password" name="password" required minlength="8"
+                            #passwordControl="ngModel">
+                        <span class="white opacity-20 fs-s3 mt-3"
+                            *ngIf="passwordControl.invalid && (passwordControl.dirty || passwordControl.touched)">
+                            <span *ngIf="passwordControl.errors?.['required']">Password is required</span>
+                            <span *ngIf="passwordControl.errors?.['minlength']">Password must be at least 8 characters
+                                long</span>
+                        </span>
+                        <div class="h-5"></div>
+                        <span class="white opacity-60 fs-s1 mt-3 flex justify-end mx-5">Forget your password?</span>
+                        <div class="h-10"></div>
+                        <button type="submit" 
+                            class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s3 mr-0 min-w-25vw">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<app-footer></app-footer>

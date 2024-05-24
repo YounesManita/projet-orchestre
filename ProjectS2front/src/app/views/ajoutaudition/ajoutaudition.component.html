@@ -1,0 +1,54 @@
+<!-- Form -->
+<section id="candidate-registration" class="h-100vh flex justify-center items-center mx-10 my-10">
+    <div class="mx-5 md-mx-l5 px-10 py-10 br-6 border-white w-70pc">
+        <div class="flex flex-column">
+            <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 text-center">Ajout Audition</h1>
+            <div class="h-l2"></div>
+<div class="gray asap m-l3">
+  <form (ngSubmit)="onSubmit()" #candidateForm="ngForm">
+      <div class="flex">
+        <input type="text" class="input m-2 flex-equal" placeholder="Extrait" [(ngModel)]="extrait" name="extrait">
+      </div>
+      <div class="flex flex-row justify-between">
+        <select
+            class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 mr-5 w-50pc"
+            [(ngModel)]="tessiture" name="tessiture" required>
+            <option value="" disabled selected>Tessiture</option>
+            <option value="base">Base</option>
+            <option value="alto">Alto</option>
+            <option value="tenor">Tenor</option>
+            <option value="soprano">Soprano</option>
+        </select>
+        <select
+            class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 mr-5 w-50pc"
+            [(ngModel)]="evaluation" name="evaluation" required>
+            <option value="" disabled selected>Evaluation</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+           
+        </select>
+        <select
+            class="input-lg bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 mr-5 w-50pc"
+            [(ngModel)]="decision" name="decision" required>
+            <option value="" disabled selected>Decision</option>
+            <option value="retenu">retenu</option>
+            <option value="enattente">En attente</option>
+            <option value="nonretenu">Non retenu</option>
+            
+        </select>
+        <div class="h-7"></div>
+       
+    </div>
+      <div class="flex">
+      <textarea class="textarea-xs" rows="3" placeholder=" Remarque..." [(ngModel)]="remarque" name="remarque"></textarea>
+      </div>
+      <div class="flex">
+        <button type="submit"  class="button m-2 w-100pc " >send</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+</div>
+</section>
